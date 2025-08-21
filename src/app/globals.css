@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    .nav-item {
+        @apply px-4 py-1.5 rounded-full text-white/70 text-sm font-semibold hover:bg-white/10 hover:text-white transition duration-300;
+
+    }
+  .hero-ring {
+  @apply absolute rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+
+  /* Main subtle emerald border */
+  border: 1px solid rgba(52, 211, 153, 0.15);
+
+  /* Soft inner + outer glow */
+  box-shadow:
+    0 0 40px rgba(52, 211, 153, 0.05) inset, /* inner glow */
+    0 0 60px rgba(52, 211, 153, 0.08),       /* outer glow */
+    0 0 100px rgba(52, 211, 153, 0.05);      /* far glow */
+
+  /* Radial fade to transparent for concentric look */
+  background: radial-gradient(
+    circle,
+    rgba(52, 211, 153, 0.05) 0%,     /* slight tint in the center */
+    rgba(52, 211, 153, 0.02) 40%,    /* faint ring body */
+    transparent 80%                  /* fades to nothing */
+  );
+
+  /* Helps avoid weird clipping in orbit animations */
+  pointer-events: none;
+}
+
+}
+
+@layer utilities {
+  .container {
+    @apply lg:max-w-5xl;
+  }
+} 
