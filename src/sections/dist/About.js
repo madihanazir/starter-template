@@ -1,6 +1,8 @@
+"use client";
 "use strict";
 exports.__esModule = true;
 exports.AboutSection = void 0;
+var react_1 = require("react");
 var SectionHeader_1 = require("@/components/SectionHeader");
 var Card_1 = require("../components/Card");
 var book_cover_png_1 = require("@/assets/images/book-cover.png");
@@ -16,6 +18,7 @@ var map_png_1 = require("@/assets/images/map.png");
 var memoji_smile_png_1 = require("@/assets/images/memoji-smile.png");
 var CardHeader_1 = require("@/components/CardHeader");
 var ToolboxItems_1 = require("@/components/ToolboxItems");
+var framer_motion_1 = require("framer-motion");
 var toolboxItems = [
     { title: "JavaScript", iconType: square_js_svg_1["default"] },
     { title: "HTML5", iconType: html5_svg_1["default"] },
@@ -35,6 +38,7 @@ var hobbies = [
     { title: "Hiking", emoji: "🍃⛰️", left: "35%", top: "40%" },
 ];
 exports.AboutSection = function () {
+    var constraintRef = react_1.useRef(null);
     return (React.createElement("section", { className: "py-20 lg:py-28" },
         React.createElement("div", { className: "max-w-6xl mx-auto px-4" },
             React.createElement(SectionHeader_1.SectionHeader, { eyebrow: "About Me", title: "A Glimpse Into My World", description: "Learn more about who I am, what I do, and what inspires me" }),
@@ -46,16 +50,18 @@ exports.AboutSection = function () {
                             React.createElement(image_1["default"], { src: book_cover_png_1["default"], alt: "Book Cover" }))),
                     React.createElement(Card_1.Card, { className: "h-[320px] p-0 relative md:col-span-2 lg:col-span-1" },
                         React.createElement(CardHeader_1.CardHeader, { title: "My Toolbox", description: "Explore the technologies and tools" }),
-                        React.createElement(ToolboxItems_1.Toolboxitems, { items: toolboxItems }),
-                        React.createElement(ToolboxItems_1.Toolboxitems, { items: toolboxItems, className: "mt-6", itemsWrapperClassName: "-translate-x-1/2" }))),
+                        React.createElement(ToolboxItems_1.Toolboxitems, { items: toolboxItems, itemsWrapperClassName: "animate-move-left [animation-duration:30s]" }),
+                        React.createElement(ToolboxItems_1.Toolboxitems, { items: toolboxItems, className: "mt-6", itemsWrapperClassName: "animate-move-right [animation-duration:15s]" }))),
                 React.createElement("div", { className: "grid grid-cols-1 md:grid-cols-2 gap-6" },
                     React.createElement(Card_1.Card, { className: "h-[320px] w-full p-0 flex flex-col" },
                         React.createElement(CardHeader_1.CardHeader, { title: "Beyond the code", description: "Explore my interests and hobbies beyond the digital realm", className: "px-6 py-6" }),
-                        React.createElement("div", { className: "relative flex-1" }, hobbies.map(function (hobby) { return (React.createElement("div", { key: hobby.title, className: "inline-flex gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute", style: { left: hobby.left, top: hobby.top } },
+                        React.createElement("div", { className: "relative flex-1", ref: constraintRef }, hobbies.map(function (hobby) { return (React.createElement(framer_motion_1.motion.div, { key: hobby.title, className: "inline-flex gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute", style: { left: hobby.left, top: hobby.top }, drag: true, dragConstraints: constraintRef },
                             React.createElement("span", { className: "font-medium text-gray-950" }, hobby.title),
                             React.createElement("span", null, hobby.emoji))); }))),
                     React.createElement(Card_1.Card, { className: "h-[320px] p-0 relative" },
                         React.createElement(image_1["default"], { src: map_png_1["default"], alt: "map", className: "h-full w-full object-cover object-left-top" }),
-                        React.createElement("div", { className: "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:outline-offset-2 after:rounded-full after:outline-gray-950/30" },
+                        React.createElement("div", { className: "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:outline-offset-2 after:rounded-full after:outline-gray-950/30" },
+                            React.createElement("div", { className: "absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 -z-20 animate-ping [animation-duration:2s]" }),
+                            React.createElement("div", { className: "absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 -z-10" }),
                             React.createElement(image_1["default"], { src: memoji_smile_png_1["default"], alt: "smiling memoji", className: "size-20" }))))))));
 };
