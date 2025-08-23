@@ -7,6 +7,7 @@ var ai_startup_landing_page_png_1 = require("@/assets/images/ai-startup-landing-
 var check_circle_svg_1 = require("@/assets/icons/check-circle.svg");
 var arrow_up_right_svg_1 = require("@/assets/icons/arrow-up-right.svg");
 var grain_jpg_1 = require("@/assets/images/grain.jpg");
+var Card_1 = require("@/components/Card");
 var portfolioProjects = [
     {
         company: "Acme Corp",
@@ -52,13 +53,15 @@ exports.ProjectsSection = function () {
                 React.createElement("p", { className: "uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text text-center" }, "Real-world results")),
             React.createElement("h2", { className: "font-serif text-3xl text-center mt-6" }, "Featured Projects"),
             React.createElement("p", { className: "text-center md:text-lg lg:text-xl text-white/60 mt-4 max-w-2xl mx-auto" }, "See how I transformed concepts into engaging digital experiences"),
-            React.createElement("div", { className: "mt-10 flex flex-col gap-20" }, portfolioProjects.map(function (project) { return (React.createElement("div", { key: project.title, className: "bg-gray-800 rounded-3xl relative z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 px-6 sm:px-8 pt-8 lg:pt-16 lg:px-20 after:pointer-events-none" },
+            React.createElement("div", { className: "mt-10 flex flex-col gap-20" }, portfolioProjects.map(function (project, projectIndex) { return (React.createElement(Card_1.Card, { key: project.title, className: "bg-gray-800 rounded-3xl relative z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 px-6 sm:px-8 pt-8 lg:pt-16 lg:px-20 after:pointer-events-none sticky", style: {
+                    top: "calc(64px + " + projectIndex * 40 + "px)"
+                } },
                 React.createElement("div", { className: "absolute inset-0 -z-10 opacity-5", style: {
                         backgroundImage: "url(" + grain_jpg_1["default"].src + ")",
                         backgroundSize: "cover",
                         backgroundPosition: "center"
                     } }),
-                React.createElement("div", { className: "lg: grid lg:grid-cols-2 lg:gap-16" },
+                React.createElement("div", { className: "lg:grid lg:grid-cols-2 lg:gap-16" },
                     React.createElement("div", { className: "lg:pb-16" },
                         React.createElement("div", { className: "bg-gradient-to-r from-emerald-300 to-sky-400 inline-flex gap-2 font-bold uppercase tracking-widest text-sm text-transparent bg-clip-text" },
                             React.createElement("span", null, project.company),
@@ -76,7 +79,5 @@ exports.ProjectsSection = function () {
                     React.createElement("div", { className: "relative" },
                         React.createElement("img", { src: typeof project.image === "string"
                                 ? project.image
-                                : project.image.src, alt: project.title, className: "mt-8 -mb-4 w-full rounded-xl lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none" }),
-                        " ")),
-                " ")); })))));
+                                : project.image.src, alt: project.title, className: "mt-8 -mb-4 w-full rounded-xl lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none" }))))); })))));
 };

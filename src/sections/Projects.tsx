@@ -4,6 +4,7 @@ import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import grainImage from "@/assets/images/grain.jpg";
+import { Card } from "@/components/Card"; 
 
 const portfolioProjects = [
   {
@@ -61,10 +62,13 @@ export const ProjectsSection = () => {
         </p>
 
         <div className="mt-10 flex flex-col gap-20">
-          {portfolioProjects.map((project) => (
-            <div
+          {portfolioProjects.map((project, projectIndex) => (
+            <Card
               key={project.title}
-              className="bg-gray-800 rounded-3xl relative z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 px-6 sm:px-8 pt-8 lg:pt-16 lg:px-20 after:pointer-events-none"
+              className="bg-gray-800 rounded-3xl relative z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 px-6 sm:px-8 pt-8 lg:pt-16 lg:px-20 after:pointer-events-none sticky"
+              style={{
+                top: `calc(64px + ${projectIndex * 40}px)`
+              }}
             >
               {/* Grain background */}
               <div
@@ -75,49 +79,50 @@ export const ProjectsSection = () => {
                   backgroundPosition: "center",
                 }}
               ></div>
-              <div className="lg: grid lg:grid-cols-2 lg:gap-16">
+              <div className="lg:grid lg:grid-cols-2 lg:gap-16">
                 <div className="lg:pb-16">
+                  <div className="bg-gradient-to-r from-emerald-300 to-sky-400 inline-flex gap-2 font-bold uppercase tracking-widest text-sm text-transparent bg-clip-text">
+                    <span>{project.company}</span>
+                    <span>&bull;</span>
+                    <span>{project.year}</span>
+                  </div>
 
-              <div className="bg-gradient-to-r from-emerald-300 to-sky-400 inline-flex gap-2 font-bold uppercase tracking-widest text-sm text-transparent bg-clip-text">
-                <span>{project.company}</span>
-                <span>&bull;</span>
-                <span>{project.year}</span>
+                  <h3 className="font-serif text-2xl mt-2">{project.title}</h3>
+
+                  <hr className="border-t-2 border-white/5 mt-4" />
+
+                  <ul className="flex flex-col gap-4 mt-4">
+                    {project.results.map((result) => (
+                      <li
+                        key={result.title}
+                        className="flex gap-2 text-sm text-white/50 items-center"
+                      >
+                        <CheckCircleIcon className="w-4 h-4 flex-shrink-0" />
+                        <span>{result.title}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <a href={project.link} target="_blank" rel="noopener noreferrer">
+                    <button className="bg-white text-gray-950 h-12 w-full rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
+                      <span>Visit Live Site</span>
+                      <ArrowUpRightIcon className="size-4" />
+                    </button>
+                  </a>
+                </div>
+                <div className="relative">
+                  <img
+                    src={
+                      typeof project.image === "string"
+                        ? project.image
+                        : project.image.src
+                    }
+                    alt={project.title}
+                    className="mt-8 -mb-4 w-full rounded-xl lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none"
+                  />
+                </div>
               </div>
-
-              <h3 className="font-serif text-2xl mt-2">{project.title}</h3>
-
-              <hr className="border-t-2 border-white/5 mt-4" />
-
-              <ul className="flex flex-col gap-4 mt-4">
-                {project.results.map((result) => (
-                  <li
-                    key={result.title}
-                    className="flex gap-2 text-sm text-white/50 items-center"
-                  >
-                    <CheckCircleIcon className="w-4 h-4 flex-shrink-0" />
-                    <span>{result.title}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <a href={project.link} target="_blank" rel="noopener noreferrer">
-                <button className="bg-white text-gray-950 h-12 w-full rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
-                  <span>Visit Live Site</span>
-                  <ArrowUpRightIcon className="size-4" />
-                </button>
-              </a>
-            </div>
-            <div className="relative">
-              <img
-                src={
-                  typeof project.image === "string"
-                    ? project.image
-                    : project.image.src
-                }
-                alt={project.title}
-                className="mt-8 -mb-4 w-full rounded-xl lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none"
-              /> </div>
-            </div> </div>
+            </Card>
           ))}
         </div>
       </div>
