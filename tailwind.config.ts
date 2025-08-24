@@ -27,10 +27,16 @@ const config: Config = {
         sans: 'var(--font-sans)', 
         serif: 'var(--font-serif)',
       },
+      colors: {
+    emeraldGlow: "rgba(16, 185, 129, 0.6)", // transparent green glow
+  },
+    backgroundImage: {
+    'emerald-rings': "url('/emerald-rings.png')", // put your emerald concentric rings asset here
+  },
       animation: {
         'ping-large': "ping-large 1s ease-in-out infinite",
-        'move-left': 'move-left 1s linear infinite',
-        'move-right': 'move-right 1s linear infinite'
+        'move-left': 'move-left 30s linear infinite',
+        'move-right': 'move-right 15s linear infinite'
       }, 
       keyframes: {
         'ping-large': {
@@ -39,6 +45,10 @@ const config: Config = {
             opacity: '0'
           }
         },
+         'star-twinkle': {
+      '0%, 100%': { opacity: '1' },
+      '50%': { opacity: '0.4' },
+    },
         'move-left': {
           '0%': {
             transform: 'translateX(0%)'
