@@ -1,12 +1,15 @@
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
 
 const config: Config = {
+
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/sections/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  
   theme: {
     screens: {
       sm: "640px",
@@ -24,51 +27,61 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-        sans: 'var(--font-sans)', 
-        serif: 'var(--font-serif)',
+        sans: "var(--font-sans)",
+        serif: "var(--font-serif)",
       },
       colors: {
-    emeraldGlow: "rgba(16, 185, 129, 0.6)", // transparent green glow
-  },
-    backgroundImage: {
-    'emerald-rings': "url('/emerald-rings.png')", // put your emerald concentric rings asset here
-  },
+        emeraldGlow: "rgba(16, 185, 129, 0.6)", // transparent green glow
+      },
+      backgroundImage: {
+        "emerald-rings": "url('/emerald-rings.png')", // put your emerald concentric rings asset here
+      },
       animation: {
-        'ping-large': "ping-large 1s ease-in-out infinite",
-        'move-left': 'move-left 30s linear infinite',
-        'move-right': 'move-right 15s linear infinite'
-      }, 
+        "ping-large": "ping-large 1s ease-in-out infinite",
+        "move-left": "move-left 30s linear infinite",
+        "move-right": "move-right 15s linear infinite",
+        "star-twinkle": "star-twinkle 2s ease-in-out infinite",
+        "spin-slow": "spin 20s linear infinite",
+        "spin-medium": "spin 30s linear infinite",
+        "spin-fast": "spin 40s linear infinite",
+      },
       keyframes: {
-        'ping-large': {
-          '75%, 100%': {
-            transform: 'scale(3)',
-            opacity: '0'
-          }
-        },
-         'star-twinkle': {
-      '0%, 100%': { opacity: '1' },
-      '50%': { opacity: '0.4' },
-    },
-        'move-left': {
-          '0%': {
-            transform: 'translateX(0%)'
+        "ping-large": {
+          "75%, 100%": {
+            transform: "scale(3)",
+            opacity: "0",
           },
-          '100%': {
-            transform: 'translateX(-50%)'
-          }
         },
-        'move-right': {
-          '0%': {
-            transform: 'translateX(-50%)'
+        "star-twinkle": {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.4" },
+        },
+        "move-left": {
+          "0%": {
+            transform: "translateX(0%)",
           },
-          '100%': {
-            transform: 'translateX(0%)'
-          }
-        }
-      }
+          "100%": {
+            transform: "translateX(-50%)",
+          },
+        },
+        "move-right": {
+          "0%": {
+            transform: "translateX(-50%)",
+          },
+          "100%": {
+            transform: "translateX(0%)",
+          },
+        },
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addBase }) {
+      addBase({
+        "html": { scrollBehavior: "smooth" },
+      });
+    }),
+  ],
 };
 
 export default config;

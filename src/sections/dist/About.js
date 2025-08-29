@@ -39,7 +39,7 @@ var hobbies = [
 ];
 exports.AboutSection = function () {
     var constraintRef = react_1.useRef(null);
-    return (React.createElement("section", { className: "py-20 lg:py-28" },
+    return (React.createElement("section", { id: "about", className: "py-20 lg:py-28", ref: constraintRef },
         React.createElement("div", { className: "max-w-6xl mx-auto px-4" },
             React.createElement(SectionHeader_1.SectionHeader, { eyebrow: "About Me", title: "A Glimpse Into My World", description: "Learn more about who I am, what I do, and what inspires me" }),
             React.createElement("div", { className: "mt-20 flex flex-col gap-8" },

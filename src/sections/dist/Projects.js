@@ -47,7 +47,7 @@ var portfolioProjects = [
     },
 ];
 exports.ProjectsSection = function () {
-    return (React.createElement("section", { className: "pb-16 lg:py-24" },
+    return (React.createElement("section", { id: "projects", className: "pb-16 lg:py-24" },
         React.createElement("div", { className: "max-w-6xl mx-auto px-4" },
             React.createElement("div", { className: "flex justify-center" },
                 React.createElement("p", { className: "uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text text-center" }, "Real-world results")),

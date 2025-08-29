@@ -8,13 +8,13 @@ import { HeroOrbit } from "@/components/HeroOrbit";
 
 export const HeroSection = () => {
   return (
-    <section className="relative z-0 flex flex-col items-center justify-center min-h-screen overflow-hidden w-full max-w-full">
+    <section  id="home" className="relative z-0 flex flex-col items-center justify-center min-h-screen overflow-hidden w-full max-w-full">
       {/* Background with grain + rings */}
       <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)] pointer-events-none">
         {/* Grain texture */}
         <div
           className="absolute inset-0 -z-30 opacity-10"
-          style={{ backgroundImage: `url(${grainImage.src})` }}
+          style={{ backgroundImage: `url(${grainImage.src})`, }}
         />
 
         {/* Concentric rings */}
@@ -74,7 +74,10 @@ export const HeroSection = () => {
             className="size-[100px]"
             alt="Person peeking"
           />
-          <StarIcon className="absolute -top-6 -left-6 w-10 h-10 text-teal-400" />
+        <HeroOrbit size={120} rotation={-20} shouldOrbit orbitDuration="60s" shouldSpin spinDuration="20s">
+  <StarIcon className="w-10 h-10 text-teal-400" />
+</HeroOrbit>
+
         </div>
 
         {/* Availability badge */}
@@ -97,8 +100,7 @@ export const HeroSection = () => {
           </h1>
           <p className="mt-4 text-white/60 md:text-lg">
             I specialize in transforming ideas and designs into robust architectures and
-            high-performing applications. With hands-on experience in backend systems,
-            real-time pipelines, and AI-driven solutions, I'm ready to bring problem
+            high-performing applications. I'm ready to bring problem
             solving with clean code to your team. Let's connect and see what you need
             built!
           </p>

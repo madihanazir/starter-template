@@ -9,7 +9,7 @@ var star_svg_1 = require("@/assets/icons/star.svg");
 var sparkle_svg_1 = require("@/assets/icons/sparkle.svg");
 var HeroOrbit_1 = require("@/components/HeroOrbit");
 exports.HeroSection = function () {
-    return (React.createElement("section", { className: "relative z-0 flex flex-col items-center justify-center min-h-screen overflow-hidden w-full max-w-full" },
+    return (React.createElement("section", { id: "home", className: "relative z-0 flex flex-col items-center justify-center min-h-screen overflow-hidden w-full max-w-full" },
         React.createElement("div", { className: "absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)] pointer-events-none" },
             React.createElement("div", { className: "absolute inset-0 -z-30 opacity-10", style: { backgroundImage: "url(" + grain_jpg_1["default"].src + ")" } }),
             React.createElement("div", { className: "absolute flex items-center justify-center w-full h-full" },
@@ -40,7 +40,8 @@ exports.HeroSection = function () {
         React.createElement("div", { className: "relative flex flex-col items-center" },
             React.createElement("div", { className: "relative z-10 flex flex-col items-center max-w-3xl mx-auto px-4" },
                 React.createElement(image_1["default"], { src: memoji_beautiful_girl_woman_white_background_emoji_826801_6882_removebg_preview_png_1["default"], className: "size-[100px]", alt: "Person peeking" }),
-                React.createElement(star_svg_1["default"], { className: "absolute -top-6 -left-6 w-10 h-10 text-teal-400" })),
+                React.createElement(HeroOrbit_1.HeroOrbit, { size: 120, rotation: -20, shouldOrbit: true, orbitDuration: "60s", shouldSpin: true, spinDuration: "20s" },
+                    React.createElement(star_svg_1["default"], { className: "w-10 h-10 text-teal-400" }))),
             React.createElement("div", { className: "bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg mt-4 relative" },
                 React.createElement("div", { className: "relative" },
                     React.createElement("div", { className: "bg-green-500 size-2.5 rounded-full relative z-10" }),
@@ -48,7 +49,7 @@ exports.HeroSection = function () {
                 React.createElement("div", { className: "text-sm font-medium" }, "Available for hiring as an SDE")),
             React.createElement("div", { className: "max-w-lg mx-auto mt-8 text-center" },
                 React.createElement("h1", { className: "font-serif text-2xl md:text-4xl tracking-wide" }, "Building exceptional solutions for user experiences"),
-                React.createElement("p", { className: "mt-4 text-white/60 md:text-lg" }, "I specialize in transforming ideas and designs into robust architectures and high-performing applications. With hands-on experience in backend systems, real-time pipelines, and AI-driven solutions, I'm ready to bring problem solving with clean code to your team. Let's connect and see what you need built!")),
+                React.createElement("p", { className: "mt-4 text-white/60 md:text-lg" }, "I specialize in transforming ideas and designs into robust architectures and high-performing applications. I'm ready to bring problem solving with clean code to your team. Let's connect and see what you need built!")),
             React.createElement("div", { className: "flex flex-col md:flex-row justify-center items-center mt-8 gap-4" },
                 React.createElement("button", { className: "inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl" },
                     React.createElement("span", { className: "font-semibold" }, "Explore My Work"),

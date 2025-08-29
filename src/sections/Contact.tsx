@@ -3,17 +3,19 @@ import grainImage from "@/assets/images/grain.jpg";
 
 export const ContactSection = () => {
   return (
-    <div className="py-16 pt-12 lg:py-24 lg:pt-20">
+    <section id="contact" className="py-16 pt-12 lg:py-24 lg:pt-20">
       {/* Full-width gradient banner */}
       <div className="relative bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-900 py-8 px-4 md:px-10 rounded-none md:rounded-3xl overflow-hidden z-0">
+        
         {/* Grain overlay */}
         <div
           className="absolute inset-0 opacity-5 -z-10"
-          style={{ backgroundImage: `url(${grainImage.src})` }}
+          style={{ backgroundImage: `url(${grainImage.src})`,  backgroundRepeat: "repeat",   // tile it instead of stretch
+            backgroundSize: "200px 200px"  }}
         />
 
         {/* Centered content wrapper (matches other cards) */}
-        <div className="container">
+        <div className="max-w-5xl mx-auto">
           <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center justify-between">
             <div>
               <h2 className="font-serif text-2xl md:text-3xl">
@@ -32,6 +34,6 @@ export const ContactSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
