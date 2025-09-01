@@ -1,3 +1,4 @@
+"use client";
 "use strict";
 exports.__esModule = true;
 exports.HeroSection = void 0;
@@ -51,10 +52,10 @@ exports.HeroSection = function () {
                 React.createElement("h1", { className: "font-serif text-2xl md:text-4xl tracking-wide" }, "Building exceptional solutions for user experiences"),
                 React.createElement("p", { className: "mt-4 text-white/60 md:text-lg" }, "I specialize in transforming ideas and designs into robust architectures and high-performing applications. I'm ready to bring problem solving with clean code to your team. Let's connect and see what you need built!")),
             React.createElement("div", { className: "flex flex-col md:flex-row justify-center items-center mt-8 gap-4" },
-                React.createElement("button", { className: "inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl" },
+                React.createElement("button", { onClick: function () { var _a; return (_a = document.getElementById("work")) === null || _a === void 0 ? void 0 : _a.scrollIntoView({ behavior: "smooth" }); }, className: "inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl" },
                     React.createElement("span", { className: "font-semibold" }, "Explore My Work"),
                     React.createElement(arrow_down_svg_1["default"], { className: "size-4" })),
-                React.createElement("button", { className: "inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl" },
+                React.createElement("button", { className: "inline-flex items-center gap-2 border border-white/15 bg-gray-900 text-white hover:bg-white hover:text-gray-900 transition-colors h-12 px-6 rounded-xl" },
                     React.createElement("span", null, "\uD83D\uDC4B"),
                     React.createElement("span", { className: "font-semibold" }, "Let's Connect"))))));
 };
