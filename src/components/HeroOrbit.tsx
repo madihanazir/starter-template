@@ -30,8 +30,8 @@ export const HeroOrbit = ({
           className="flex items-center justify-start"
           style={{
             transform: `rotate(${rotation}deg)`,
-            height: `min(${size}px, )`,
-            width: `min(${size}px, )`,
+            height: `${size}px`,
+            width: `${size}px`,
           }}
         >
           {/* Position star on the right edge of orbit */}

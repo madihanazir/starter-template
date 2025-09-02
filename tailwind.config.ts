@@ -71,10 +71,13 @@ const config: Config = {
           "100%": {
             transform: "translateX(0%)",
           },
+          
         },
       },
     },
   },
+
+
   plugins: [
     plugin(function ({ addBase }) {
       addBase({

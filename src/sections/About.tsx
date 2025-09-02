@@ -13,7 +13,7 @@ import PythonIcon from "@/assets/icons/Python-logo-notext.svg";
 import GolangIcon from "@/assets/icons/cdnlogo.com_golang.svg";
 import { TechIcon } from "@/components/TechIcon";
 import mapImage from "@/assets/images/map.png";
-import smileMemoji from "@/assets/images/memoji-smile.png";
+import smileMemoji from "@/assets/images/memoji-beautiful-girl-woman-white-.png";
 import { CardHeader } from "@/components/CardHeader";
 import { Toolboxitems } from "@/components/ToolboxItems";
 import { motion } from "framer-motion";
@@ -72,12 +72,12 @@ export const AboutSection = () => {
               />
               <Toolboxitems
                 items={toolboxItems}
-                itemsWrapperClassName="animate-move-left [animation-duration:30s]"
+                itemsWrapperClassName="animate-move-left"
               />
               <Toolboxitems
                 items={toolboxItems}
-                className="mt-6"
-                itemsWrapperClassName="animate-move-right [animation-duration:15s]"
+                className="mt-4"
+                itemsWrapperClassName="animate-move-right"
               />
             </Card>
           </div>

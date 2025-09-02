@@ -15,7 +15,7 @@ var github_svg_1 = require("@/assets/icons/github.svg");
 var Python_logo_notext_svg_1 = require("@/assets/icons/Python-logo-notext.svg");
 var cdnlogo_com_golang_svg_1 = require("@/assets/icons/cdnlogo.com_golang.svg");
 var map_png_1 = require("@/assets/images/map.png");
-var memoji_smile_png_1 = require("@/assets/images/memoji-smile.png");
+var memoji_beautiful_girl_woman_white__png_1 = require("@/assets/images/memoji-beautiful-girl-woman-white-.png");
 var CardHeader_1 = require("@/components/CardHeader");
 var ToolboxItems_1 = require("@/components/ToolboxItems");
 var framer_motion_1 = require("framer-motion");
@@ -50,8 +50,8 @@ exports.AboutSection = function () {
                             React.createElement(image_1["default"], { src: book_cover_png_1["default"], alt: "Book Cover" }))),
                     React.createElement(Card_1.Card, { className: "h-[320px] p-0 relative md:col-span-2 lg:col-span-1" },
                         React.createElement(CardHeader_1.CardHeader, { title: "My Toolbox", description: "Explore the technologies and tools" }),
-                        React.createElement(ToolboxItems_1.Toolboxitems, { items: toolboxItems, itemsWrapperClassName: "animate-move-left [animation-duration:30s]" }),
-                        React.createElement(ToolboxItems_1.Toolboxitems, { items: toolboxItems, className: "mt-6", itemsWrapperClassName: "animate-move-right [animation-duration:15s]" }))),
+                        React.createElement(ToolboxItems_1.Toolboxitems, { items: toolboxItems, itemsWrapperClassName: "animate-move-left" }),
+                        React.createElement(ToolboxItems_1.Toolboxitems, { items: toolboxItems, className: "mt-4", itemsWrapperClassName: "animate-move-right" }))),
                 React.createElement("div", { className: "grid grid-cols-1 md:grid-cols-2 gap-6" },
                     React.createElement(Card_1.Card, { className: "h-[320px] w-full p-0 flex flex-col" },
                         React.createElement(CardHeader_1.CardHeader, { title: "Beyond the code", description: "Explore my interests and hobbies beyond the digital realm", className: "px-6 py-6" }),
@@ -63,5 +63,5 @@ exports.AboutSection = function () {
                         React.createElement("div", { className: "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:outline-offset-2 after:rounded-full after:outline-gray-950/30" },
                             React.createElement("div", { className: "absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 -z-20 animate-ping [animation-duration:2s]" }),
                             React.createElement("div", { className: "absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 -z-10" }),
-                            React.createElement(image_1["default"], { src: memoji_smile_png_1["default"], alt: "smiling memoji", className: "size-20" }))))))));
+                            React.createElement(image_1["default"], { src: memoji_beautiful_girl_woman_white__png_1["default"], alt: "smiling memoji", className: "size-20" }))))))));
 };
