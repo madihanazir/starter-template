@@ -9,7 +9,7 @@ import { HeroOrbit } from "@/components/HeroOrbit";
 
 export const HeroSection = () => {
   return (
-    <section  id="home" className="relative z-0 flex flex-col items-center justify-center min-h-screen overflow-hidden w-full max-w-full">
+    <section  id="home" className="relative z-0 flex flex-col items-center justify-center min-h-screen overflow-hidden w-full max-w-full  bg-gray-900 text-white">
       {/* Background with grain + rings */}
       <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)] pointer-events-none">
         {/* Grain texture */}

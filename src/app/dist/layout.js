@@ -20,7 +20,6 @@ exports.metadata = {
 function RootLayout(_a) {
     var children = _a.children;
     return (React.createElement("html", { lang: "en" },
-        React.createElement("body", { className: tailwind_merge_1.twMerge(inter.variable, calistoga.variable, "bg-gray-900 text-white antialiased font-sans overflow-x-hidden") },
-            React.createElement("div", { className: "max-w-7xl mx-auto px-4" }, children))));
+        React.createElement("body", { className: tailwind_merge_1.twMerge(inter.variable, calistoga.variable, "bg-gray-900 text-white antialiased font-sans overflow-x-hidden") }, children)));
 }
 exports["default"] = RootLayout;

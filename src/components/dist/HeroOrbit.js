@@ -10,8 +10,8 @@ exports.HeroOrbit = function (_a) {
             } },
             React.createElement("div", { className: "flex items-center justify-start", style: {
                     transform: "rotate(" + rotation + "deg)",
-                    height: "min(" + size + "px, 90vw)",
-                    width: "min(" + size + "px, 90vw)"
+                    height: "min(" + size + "px, )",
+                    width: "min(" + size + "px, )"
                 } },
                 React.createElement("div", { className: tailwind_merge_1.twMerge(shouldSpin === true && "animate-spin"), style: {
                         animationDuration: spinDuration

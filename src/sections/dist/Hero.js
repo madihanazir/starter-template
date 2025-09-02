@@ -10,7 +10,7 @@ var star_svg_1 = require("@/assets/icons/star.svg");
 var sparkle_svg_1 = require("@/assets/icons/sparkle.svg");
 var HeroOrbit_1 = require("@/components/HeroOrbit");
 exports.HeroSection = function () {
-    return (React.createElement("section", { id: "home", className: "relative z-0 flex flex-col items-center justify-center min-h-screen overflow-hidden w-full max-w-full" },
+    return (React.createElement("section", { id: "home", className: "relative z-0 flex flex-col items-center justify-center min-h-screen overflow-hidden w-full max-w-full  bg-gray-900 text-white" },
         React.createElement("div", { className: "absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)] pointer-events-none" },
             React.createElement("div", { className: "absolute inset-0 -z-30 opacity-10", style: { backgroundImage: "url(" + grain_jpg_1["default"].src + ")" } }),
             React.createElement("div", { className: "absolute flex items-center justify-center w-full h-full" },
