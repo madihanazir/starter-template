@@ -98,7 +98,7 @@ export const HeroSection = () => {
           </div>
           {/* Text */}
           <div className="text-sm font-medium">
-            Available for hiring as an SDE
+            Madiha, available for hiring as an SDE
           </div>
         </div>
 
@@ -121,11 +121,15 @@ export const HeroSection = () => {
               onClick={() =>
               document.getElementById("work")?.scrollIntoView({ behavior: "smooth" })
             }
-          className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
+          className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl hover:bg-white hover:text-black transition-colors duration-200">
             <span className="font-semibold">Explore My Work</span>
             <ArrowDown className="size-4" />
           </button>
-          <button className="inline-flex items-center gap-2 border border-white/15 bg-gray-900 text-white hover:bg-white hover:text-gray-900 transition-colors h-12 px-6 rounded-xl">
+          <button
+          onClick={() =>
+            document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
+          }
+           className="inline-flex items-center gap-2 border border-white/15 bg-gray-900 text-white hover:bg-white hover:text-gray-900 transition-colors h-12 px-6 rounded-xl">
             <span>👋</span>
             <span className="font-semibold">Let's Connect</span>
           </button>

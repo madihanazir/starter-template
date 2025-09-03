@@ -10,8 +10,11 @@ export const ContactSection = () => {
         {/* Grain overlay */}
         <div
           className="absolute inset-0 opacity-5 -z-10"
-          style={{ backgroundImage: `url(${grainImage.src})`,  backgroundRepeat: "repeat",   // tile it instead of stretch
-            backgroundSize: "200px 200px"  }}
+          style={{ 
+            backgroundImage: `url(${grainImage.src})`,  
+            backgroundRepeat: "repeat",
+            backgroundSize: "200px 200px"  
+          }}
         />
 
         {/* Centered content wrapper (matches other cards) */}
@@ -26,10 +29,15 @@ export const ContactSection = () => {
               </p>
             </div>
             <div>
-              <button className="text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-900">
+              <a 
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=madihan541@gmail.com&su=Reaching%20Out&body=Hello%20Madihan,"
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-900 hover:bg-white hover:text-gray-900 transition-colors duration-200"
+              >
                 <span className="font-semibold">Contact Me</span>
                 <ArrowUpRightIcon className="size-4" />
-              </button>
+              </a>
             </div>
           </div>
         </div>

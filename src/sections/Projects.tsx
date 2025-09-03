@@ -8,27 +8,27 @@ import { Card } from "@/components/Card";
 
 const portfolioProjects = [
   {
-    company: "Acme Corp",
-    year: "2022",
-    title: "Dark Saas Landing Page",
+    company: "Heart Disease Detection",
+    year: "2023",
+    title: "Flask-based web application ",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Practical experience in deploying ML solutions within web apps" },
+      { title: "Built a minimalistic, responsive UI using HTML, CSS, and deployed the solution to cloud platforms for public access" },
+
     ],
-    link: "https://youtu.be/4k7IdSLxh6w",
+    link: "https://heart-disease-detection-web-app.onrender.com/",
     image: darkSaasLandingPage,
   },
   {
-    company: "Innovative Co",
-    year: "2021",
-    title: "Light Saas Landing Page",
+    company: "Hybrid Intrusion Detection App",
+    year: "2025",
+    title: "Interactive Security Dashboard & Analytics",
     results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
+      { title: "Integrated a Go Fiber REST API to fetch data for dashboards and reporting." },
+      { title: "Designed a single PostgreSQL events table that stores both logs and alerts, making it easier to query, analyze, and visualize." },
+      { title: "Successfully deployed a pipeline that captures live network traffic and flags anomalies using Isolation Forest + Random Forest (via ONNX Runtime)." },
     ],
-    link: "https://youtu.be/7hi5zwO75yc",
+    link: "https://github.com/madihanazir/MyApp-Release/releases/tag/v1.0.0",
     image: lightSaasLandingPage,
   },
   {
