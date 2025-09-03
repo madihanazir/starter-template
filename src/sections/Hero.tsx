@@ -57,7 +57,7 @@ export const HeroSection = () => {
         <HeroOrbit size={750} rotation={220} shouldOrbit orbitDuration="44s" shouldSpin spinDuration="16s">
           <div className="size-3 rounded-full bg-emerald-300/60" />
         </HeroOrbit>
-        <HeroOrbit size={800} rotation={-135} shouldOrbit orbitDuration="60" shouldSpin spinDuration="18s">
+        <HeroOrbit size={800} rotation={-135} shouldOrbit orbitDuration="60s" shouldSpin spinDuration="18s">
           <StarIcon className="absolute -top-10 -left-10 w-10 h-10 text-teal-400" />
         </HeroOrbit>
         <HeroOrbit size={800} rotation={-72} shouldOrbit orbitDuration="68s" shouldSpin spinDuration="20s">

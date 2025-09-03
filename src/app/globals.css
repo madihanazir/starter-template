@@ -64,3 +64,16 @@
 .animate-move-right {
   animation: move-right 15s linear infinite;
 }
+
+@keyframes tape-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-tape-scroll {
+  animation: tape-scroll 20s linear infinite;
+}

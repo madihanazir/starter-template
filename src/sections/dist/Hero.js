@@ -34,7 +34,7 @@ exports.HeroSection = function () {
                 React.createElement(sparkle_svg_1["default"], { className: "size-14 text-emerald-300/20" })),
             React.createElement(HeroOrbit_1.HeroOrbit, { size: 750, rotation: 220, shouldOrbit: true, orbitDuration: "44s", shouldSpin: true, spinDuration: "16s" },
                 React.createElement("div", { className: "size-3 rounded-full bg-emerald-300/60" })),
-            React.createElement(HeroOrbit_1.HeroOrbit, { size: 800, rotation: -135, shouldOrbit: true, orbitDuration: "60", shouldSpin: true, spinDuration: "18s" },
+            React.createElement(HeroOrbit_1.HeroOrbit, { size: 800, rotation: -135, shouldOrbit: true, orbitDuration: "60s", shouldSpin: true, spinDuration: "18s" },
                 React.createElement(star_svg_1["default"], { className: "absolute -top-10 -left-10 w-10 h-10 text-teal-400" })),
             React.createElement(HeroOrbit_1.HeroOrbit, { size: 800, rotation: -72, shouldOrbit: true, orbitDuration: "68s", shouldSpin: true, spinDuration: "20s" },
                 React.createElement(star_svg_1["default"], { className: "size-28 text-emerald-300" })),
