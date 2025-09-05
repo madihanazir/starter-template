@@ -74,7 +74,7 @@ export const ProjectsSection = () => {
               <div
                 className="absolute inset-0 -z-10 opacity-5"
                 style={{
-                  backgroundImage: `url(${grainImage.src})`,
+                  backgroundImage: `url(${grainImage})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}
@@ -111,16 +111,13 @@ export const ProjectsSection = () => {
                   </a>
                 </div>
                 <div className="relative">
-                  <img
-                    src={
-                      typeof project.image === "string"
-                        ? project.image
-                        : project.image.src
-                    }
-                    alt={project.title}
-                    className="mt-8 -mb-4 w-full rounded-xl lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none"
-                  />
-                </div>
+  <img
+    src={project.image}
+    alt={project.title}
+    className="mt-8 -mb-4 w-full rounded-xl lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none"
+  />
+</div>
+
               </div>
             </Card>
           ))}

@@ -11,7 +11,7 @@ export const ContactSection = () => {
         <div
           className="absolute inset-0 opacity-5 -z-10"
           style={{ 
-            backgroundImage: `url(${grainImage.src})`,  
+            backgroundImage: `url(${grainImage})`,  
             backgroundRepeat: "repeat",
             backgroundSize: "200px 200px"  
           }}

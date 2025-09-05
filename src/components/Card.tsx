@@ -15,7 +15,7 @@ export const Card = ({ className, children, ...other }: ComponentPropsWithoutRef
             <div
                 className="absolute inset-0 -z-10 opacity-5"
                 style={{
-                    backgroundImage: `url(${grainImage.src})`,
+                    backgroundImage: `url(${grainImage})`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                 }}

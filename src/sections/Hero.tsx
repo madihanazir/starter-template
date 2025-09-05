@@ -15,7 +15,7 @@ export const HeroSection = () => {
         {/* Grain texture */}
         <div
           className="absolute inset-0 -z-30 opacity-10"
-          style={{ backgroundImage: `url(${grainImage.src})`, }}
+          style={{ backgroundImage: `url(${grainImage})`, }}
         />
 
         {/* Concentric rings */}
