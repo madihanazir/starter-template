@@ -8,6 +8,7 @@ var check_circle_svg_1 = require("@/assets/icons/check-circle.svg");
 var arrow_up_right_svg_1 = require("@/assets/icons/arrow-up-right.svg");
 var grain_jpg_1 = require("@/assets/images/grain.jpg");
 var Card_1 = require("@/components/Card");
+var image_1 = require("next/image");
 var portfolioProjects = [
     {
         company: "Heart Disease Detection",
@@ -76,5 +77,5 @@ exports.ProjectsSection = function () {
                                 React.createElement("span", null, "Visit Live Site"),
                                 React.createElement(arrow_up_right_svg_1["default"], { className: "size-4" })))),
                     React.createElement("div", { className: "relative" },
-                        React.createElement("img", { src: project.image, alt: project.title, className: "mt-8 -mb-4 w-full rounded-xl lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none" }))))); })))));
+                        React.createElement(image_1["default"], { src: project.image, alt: project.title, className: "mt-8 -mb-4 w-full rounded-xl lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none" }))))); })))));
 };
