@@ -36,6 +36,6 @@ yarn-error.log*
 next-env.d.ts
 dist
 **/dist
-.next
+*.next
 node_modules
 
